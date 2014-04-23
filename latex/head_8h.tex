@@ -1,0 +1,102 @@
+\hypertarget{head_8h}{\section{list/head.h File Reference}
+\label{head_8h}\index{list/head.\-h@{list/head.\-h}}
+}
+{\ttfamily \#include \char`\"{}stdafx.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{structlist}{list}
+\begin{DoxyCompactList}\small\item\em Структура, реализующая элемент списка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{head_8h_a822b0ea2197c9fd3f408cf3345105650}{read} (\hyperlink{structlist}{list} $\ast$first)
+\begin{DoxyCompactList}\small\item\em Функция, служащая для считывания списка. \end{DoxyCompactList}\item 
+void \hyperlink{head_8h_aebe9e887a83e514b342453da7ba1e5f2}{print} (\hyperlink{structlist}{list} $\ast$first)
+\begin{DoxyCompactList}\small\item\em Функция, служащая для вывода списка. \end{DoxyCompactList}\item 
+void \hyperlink{head_8h_a222c1adf5baa6c1e66cd21ebd8bb327c}{initialisation} (\hyperlink{structlist}{list} $\ast$first)
+\begin{DoxyCompactList}\small\item\em Функция, служащая для начальной инициализации. \end{DoxyCompactList}\item 
+void \hyperlink{head_8h_a5a9d4b86b04ecfa4195cb7a821e23ff8}{remove} (\hyperlink{structlist}{list} $\ast$first, int d)
+\begin{DoxyCompactList}\small\item\em Функция, служащая для удаления i-\/го элемента из списка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{head_8h_a76f11d9a0a47b94f72c2d0e77fb32240}{n}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{head_8h_a222c1adf5baa6c1e66cd21ebd8bb327c}{\index{head.\-h@{head.\-h}!initialisation@{initialisation}}
+\index{initialisation@{initialisation}!head.h@{head.\-h}}
+\subsubsection[{initialisation}]{\setlength{\rightskip}{0pt plus 5cm}void initialisation (
+\begin{DoxyParamCaption}
+\item[{{\bf list} $\ast$}]{first}
+\end{DoxyParamCaption}
+)}}\label{head_8h_a222c1adf5baa6c1e66cd21ebd8bb327c}
+
+
+Функция, служащая для начальной инициализации. 
+
+По умолчанию все элементы равны \char`\"{}0\char`\"{}, все флаги равны \char`\"{}false\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ указатель на массив(на 1 элемент). \\
+\hline
+\end{DoxyParams}
+\hypertarget{head_8h_aebe9e887a83e514b342453da7ba1e5f2}{\index{head.\-h@{head.\-h}!print@{print}}
+\index{print@{print}!head.h@{head.\-h}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{{\bf list} $\ast$}]{first}
+\end{DoxyParamCaption}
+)}}\label{head_8h_aebe9e887a83e514b342453da7ba1e5f2}
+
+
+Функция, служащая для вывода списка. 
+
+Вывод i-\/ый элемент. Если i-\/ый элемент не был заполнен -\/ выводится \char`\"{}\-Not set.\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ указатель на массив(на 1 элемент). \\
+\hline
+\end{DoxyParams}
+\hypertarget{head_8h_a822b0ea2197c9fd3f408cf3345105650}{\index{head.\-h@{head.\-h}!read@{read}}
+\index{read@{read}!head.h@{head.\-h}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}void read (
+\begin{DoxyParamCaption}
+\item[{{\bf list} $\ast$}]{first}
+\end{DoxyParamCaption}
+)}}\label{head_8h_a822b0ea2197c9fd3f408cf3345105650}
+
+
+Функция, служащая для считывания списка. 
+
+Считывание происходит в формате \char`\"{}номер в списке\char`\"{}-\/\char`\"{}значение\char`\"{}. Если на данном месте уже естоит какое-\/то значение, будет произведена проверка на наличее свободных мест (сначала с прва от вводимого номера, затем слева). Если такое место будет найдено, все элементы в списке сдвинутся в соответсвующую сторону. Если такое место найдено не будет(в данной реализации невозможно, новый элемент запишется поверх существующего. При неправильном вводе номера элемнта, будет выдана ошибка \char`\"{}error number\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ указатель на массив(на 1 элемент). \\
+\hline
+\end{DoxyParams}
+\hypertarget{head_8h_a5a9d4b86b04ecfa4195cb7a821e23ff8}{\index{head.\-h@{head.\-h}!remove@{remove}}
+\index{remove@{remove}!head.h@{head.\-h}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void remove (
+\begin{DoxyParamCaption}
+\item[{{\bf list} $\ast$}]{first, }
+\item[{int}]{d}
+\end{DoxyParamCaption}
+)}}\label{head_8h_a5a9d4b86b04ecfa4195cb7a821e23ff8}
+
+
+Функция, служащая для удаления i-\/го элемента из списка. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ указатель на массив(на 1 элемент). \\
+\hline
+{\em d} & -\/ номер элемента, который необходимо удалить. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{head_8h_a76f11d9a0a47b94f72c2d0e77fb32240}{\index{head.\-h@{head.\-h}!n@{n}}
+\index{n@{n}!head.h@{head.\-h}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}int n}}\label{head_8h_a76f11d9a0a47b94f72c2d0e77fb32240}
+Количество элемнтов в списке. 
